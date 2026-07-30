@@ -12,7 +12,7 @@
     <audio id="bg-music" src="music.MP3" loop></audio>
     
     <!-- New Audio File for Engagement Celebration -->
-    <audio id="engagement-music" src="engagement-song.mp3" loop></audio>
+    <audio id="engagement-music" src="engagement-song.MP3" loop></audio>
 
     <div class="container" id="main-container">
         <h1>Welcome, My Love ❤️</h1>
@@ -25,7 +25,7 @@
         <div id="love-letter-section" class="hidden-step">
             <div class="letter-box">
                 <p><strong>My Dearest,</strong></p>
-                <p>**My Aaku ❤️,** you are the most beautiful part of my life and the greatest gift God gave me on my birthday. 🎂💝 Since the day we met, my world has been filled with love and happiness. Every heartbeat of mine belongs to you, and every dream I have is with you. 💖 I don't just want you in my life—I want to hold your hand forever and proudly call you **my wife** one day. 💍✨ I love you more than words can ever express. 🥹❤️</p>
+                <p><strong>My Aaku ❤️,</strong> you are the most beautiful part of my life and the greatest gift God gave me on my birthday. 🎂💝 Since the day we met, my world has been filled with love and happiness. Every heartbeat of mine belongs to you, and every dream I have is with you. 💖 I don't just want you in my life—I want to hold your hand forever and proudly call you **my wife** one day. 💍✨ I love you more than words can ever express. 🥹❤️</p>
             </div>
             <button class="btn" onclick="openImages()">See Our Memories 📸</button>
         </div>
@@ -87,13 +87,18 @@
         </div>
     </div>
 
-    <!-- Step 6: Full-Screen Celebration Page with 9:16 Engagement Photos & Kiss Animation (Hidden at start) -->
+    <!-- Step 6: Full-Screen Celebration Page with 9:16 Engagement Photos & Kiss Animation -->
     <div id="celebration-page" style="display: none;">
-        <h1 class="celebs-title">Happy GirlFriend Day! 🎉💍</h1>
+        <h1 class="celebs-title">She Said Yes! 🎉💍</h1>
         
-        <!-- Big Kiss Animation Pop-up in the front -->
+        <!-- Big Kiss Animation Pop-up -->
         <div class="kiss-container">
             <span class="kiss-emoji">💋😘❤️</span>
+        </div>
+
+        <!-- Play Music Button in case autoplay is blocked -->
+        <div style="margin-bottom: 20px;">
+            <button class="btn" onclick="playEngagementSong()" style="font-size: 1rem; padding: 10px 20px;">Play Our Song 🎵</button>
         </div>
 
         <!-- Gallery for the 2 Big Engagement Photos (9:16 vertical aspect ratio) -->
@@ -103,14 +108,8 @@
         </div>
         
         <p class="celebs-footer">
-            Here’s to forever, My Aaku ❤️ Anish
+            Here’s to forever, My Aaku ❤️ Akrish
         </p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-<!-- Background Audio File for Start -->
-    <audio id="bg-music" src="engagement-song.MP3" loop></audio>
     </div>
 
     <script src="script.js"></script>
