@@ -1,0 +1,307 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    position: relative;
+    transition: background 1s ease;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    color: #ff4757;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ff6b81;
+}
+
+/* Hidden steps styling */
+.hidden-step {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.letter-box {
+    background: #fff0f3;
+    padding: 20px;
+    border-radius: 12px;
+    color: #d63031;
+    margin-bottom: 15px;
+    text-align: left;
+    border-left: 4px solid #ff4757;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.final-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff4757;
+    margin-top: 15px;
+}
+
+/* Floating Heart Balloons Animation */
+.heart {
+    position: fixed;
+    bottom: -10vh;
+    font-size: 20px;
+    user-select: none;
+    z-index: 1;
+    animation: rise linear forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+/* Romantic Proposal Background Transition */
+body.romantic-bg {
+    background: linear-gradient(135deg, #2c001e 0%, #512b58 50%, #850035 100%) !important;
+}
+
+body.romantic-bg .container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 40px rgba(255, 71, 87, 0.4);
+}
+
+/* Pulsing Proposal Heart Button */
+.proposal-heart-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.8);
+    animation: pulseHeart 1.5s infinite;
+    transition: transform 0.2s;
+}
+
+.proposal-heart-btn:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulseHeart {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
+    70% { transform: scale(1.15); box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+}
+
+/* Ring and Proposal Styling */
+.proposal-box {
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.ring-emoji {
+    font-size: 4rem;
+    display: inline-block;
+    animation: bounceRing 2s infinite ease-in-out;
+}
+
+@keyframes bounceRing {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(10deg); }
+}
+
+/* ==========================================
+   COUNTDOWN PAGE STYLING
+   ========================================== */
+#countdown-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 9998;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.countdown-box {
+    background: rgba(44, 0, 30, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    max-width: 500px;
+    width: 100%;
+    border: 3px solid rgba(255, 71, 87, 0.6);
+}
+
+/* ==========================================
+   CLEAN ENGAGEMENT CELEBRATION & ROSE RAIN
+   ========================================== */
+
+body.engagement-active {
+    background: linear-gradient(135deg, #3a0007 0%, #720925 50%, #b51736 100%) !important;
+    overflow-y: auto !important;
+}
+
+#celebration-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.celebs-title {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+/* Big Kiss Animation Styling */
+.kiss-container {
+    margin-bottom: 25px;
+}
+
+.kiss-emoji {
+    font-size: 4.5rem;
+    display: inline-block;
+    animation: pulseKiss 1.2s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 71, 87, 0.8));
+}
+
+@keyframes pulseKiss {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.celebs-footer {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 30px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* 9:16 Vertical Engagement Photo Gallery */
+.gallery-vertical {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.gallery-vertical img {
+    width: 360px;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border: 5px solid rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 800px) {
+    .gallery-vertical {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .gallery-vertical img {
+        width: 270px;
+        height: 480px;
+    }
+}
+
+/* Rose Rain Falling Animation Elements */
+.rose-petal {
+    position: fixed;
+    top: -10vh;
+    font-size: 24px;
+    user-select: none;
+    z-index: 9997;
+    animation: fallRose linear forwards;
+}
+
+@keyframes fallRose {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}

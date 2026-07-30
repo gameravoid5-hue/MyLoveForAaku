@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Audio File for Start -->
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    
+    <!-- New Audio File for Engagement Celebration -->
+    <audio id="engagement-music" src="engagement-song.mp3" loop></audio>
+
+    <div class="container" id="main-container">
+        <h1>Welcome, My Love ❤️</h1>
+        <p>I made something special just for you.</p>
+
+        <!-- First Button (Starts music automatically & opens letter) -->
+        <button class="btn" id="btn1" onclick="openLoveLetter()">Open My Surprise 💖</button>
+
+        <!-- Step 1: Love Letter Section (Hidden at start) -->
+        <div id="love-letter-section" class="hidden-step">
+            <div class="letter-box">
+                <p><strong>My Dearest,</strong></p>
+                <p>**My Aaku ❤️,** you are the most beautiful part of my life and the greatest gift God gave me on my birthday. 🎂💝 Since the day we met, my world has been filled with love and happiness. Every heartbeat of mine belongs to you, and every dream I have is with you. 💖 I don't just want you in my life—I want to hold your hand forever and proudly call you **my wife** one day. 💍✨ I love you more than words can ever express. 🥹❤️</p>
+            </div>
+            <button class="btn" onclick="openImages()">See Our Memories 📸</button>
+        </div>
+
+        <!-- Step 2: Single Image & Final Text Section -->
+        <div id="image-section" class="hidden-step">
+            <div class="gallery">
+                <img src="image.jpg" alt="My Love">
+            </div>
+            <p class="final-text"># Akrish 🌹🥰💍</p>
+            <p class="final-text">My whole life ❤️</p>
+            <br>
+            <!-- Button to open the video -->
+            <button class="btn" onclick="openVideo()">Watch Our Video 🎥</button>
+        </div>
+
+        <!-- Step 3: Video Section -->
+        <div id="video-section" class="hidden-step">
+            <div style="margin-top: 15px;">
+                <!-- onended triggers the heart button when video finishes -->
+                <video id="love-video" width="100%" controls onended="showProposal()" style="border-radius: 12px; max-height: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Heart Button that appears when video ends -->
+            <div id="heart-btn-container" style="text-align: center; margin-top: 20px; display: none;">
+                <button class="proposal-heart-btn" onclick="openProposalPage()">❤️</button>
+                <p style="color: #ff4757; font-weight: bold; margin-top: 5px;">Tap the heart, my love...</p>
+            </div>
+        </div>
+
+        <!-- Step 4: Final Romantic Proposal Page (Hidden at start) -->
+        <div id="proposal-section" class="hidden-step" style="text-align: center;">
+            <div class="proposal-box">
+                <span class="ring-emoji">💍✨</span>
+                <h2 style="color: #d63031; font-size: 2rem; margin-bottom: 10px;">Will You Marry Me?</h2>
+                <p style="font-size: 1.2rem; line-height: 1.6; color: #4a4a4a;">
+                    You are my today, my tomorrow, and all of my forevers, Aaku. <br>I want to spend the rest of my life making you the happiest. ❤️
+                </p>
+                <div style="margin-top: 20px;">
+                    <!-- Triggers the 10-second countdown screen -->
+                    <button class="btn" onclick="startCountdown()" style="font-size: 1.2rem; padding: 15px 35px;">YES! A Thousand Times Yes! 🥹💖</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 5: 10-Second Countdown & Romantic Message Screen (Hidden at start) -->
+    <div id="countdown-page" style="display: none;">
+        <div class="countdown-box">
+            <h2 style="color: #fff; font-size: 2rem; margin-bottom: 15px;">Get ready for our forever, My Love... 🌹</h2>
+            <p id="love-quote-text" style="color: #ffccd5; font-size: 1.3rem; line-height: 1.6; margin-bottom: 25px; font-style: italic;">
+                "From this moment until my last breath, my heart belongs completely to you. Let's step into our forever together..." ❤️✨
+            </p>
+            <div id="countdown-number" style="color: #fff; font-size: 5rem; font-weight: bold; text-shadow: 0 0 20px rgba(255,71,87,0.8);">
+                10
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 6: Full-Screen Celebration Page with 9:16 Engagement Photos & Kiss Animation (Hidden at start) -->
+    <div id="celebration-page" style="display: none;">
+        <h1 class="celebs-title">Happy GirlFriend Day! 🎉💍</h1>
+        
+        <!-- Big Kiss Animation Pop-up in the front -->
+        <div class="kiss-container">
+            <span class="kiss-emoji">💋😘❤️</span>
+        </div>
+
+        <!-- Gallery for the 2 Big Engagement Photos (9:16 vertical aspect ratio) -->
+        <div class="gallery-vertical">
+            <img src="engagement1.jpg" alt="Engagement Photo 1">
+            <img src="engagement2.jpg" alt="Engagement Photo 2">
+        </div>
+        
+        <p class="celebs-footer">
+            Here’s to forever, My Aaku ❤️ Anish
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<!-- Background Audio File for Start -->
+    <audio id="bg-music" src="engagement-song.mp3" loop></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
