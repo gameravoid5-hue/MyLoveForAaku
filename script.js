@@ -100,22 +100,16 @@ function startCountdown() {
 
 // Triggered when the 10-second countdown hits zero
 function showCelebrationPage() {
-    // Stop old heart balloons
     clearInterval(heartInterval);
     var oldElements = document.querySelectorAll('.heart');
     oldElements.forEach(el => el.remove());
 
-    // Hide main container & countdown page completely
     document.getElementById("main-container").style.display = "none";
     document.getElementById("countdown-page").style.display = "none";
 
-    // START the engagement celebration song right now as countdown finishes!
     var engageMusic = document.getElementById("engagement-music");
     engageMusic.play().catch(error => console.log("Engagement audio play error:", error));
 
-    // Show the full-screen celebration page with the pulsing kiss and vertical 9:16 photos
     document.getElementById("celebration-page").style.display = "block";
-
-    // Start continuous rose rain falling effect
     setInterval(createRosePetal, 200);
 }
